@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOUBLE TAKE — Spot the Difference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hud-left">
+      <div id="game-title">DOUBLE&nbsp;TAKE</div>
+      <div id="level-name">Sunset Market</div>
+    </div>
+    <div class="hud-center">
+      <div id="counter"><span id="found-count">0</span><span class="counter-sep"> / </span><span id="total-count">7</span><span class="counter-word"> found</span></div>
+      <div id="timebar"><div id="timefill"></div></div>
+      <div id="time-label">90s</div>
+    </div>
+    <div class="hud-right">
+      <div id="score-box">SCORE <span id="score">0</span></div>
+      <div id="combo-box">COMBO <span id="combo">×1</span></div>
+    </div>
+  </header>
+
+  <main id="stage">
+    <canvas id="game" width="1280" height="560"></canvas>
+    <div id="toast"></div>
+  </main>
+
+  <footer id="controls">
+    <button id="hint-btn" type="button">💡 Hint <span id="hints-left">(3)</span> <kbd>H</kbd></button>
+    <div id="level-dots"></div>
+    <div id="keys-help">Click a difference · <kbd>H</kbd> hint · <kbd>R</kbd> restart · <kbd>N</kbd> next level</div>
+  </footer>
+
+  <div id="overlay" class="show">
+    <div id="overlay-card">
+      <div id="overlay-kicker">SPOT THE DIFFERENCE</div>
+      <h1 id="overlay-title">DOUBLE TAKE</h1>
+      <p id="overlay-text">Two pictures, side by side. They look the same — they are not.
+      Find all 7 differences in each scene before the clock runs out.</p>
+      <div id="overlay-stars"></div>
+      <div id="overlay-stats"></div>
+      <button id="overlay-btn" type="button">▶ Start playing</button>
+      <p id="overlay-foot">3 scenes · 7 differences each · hints cost nothing but pride</p>
+    </div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
